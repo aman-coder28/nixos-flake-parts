@@ -3,7 +3,6 @@
   flake.homeMoodule.zeamanHomeConfig = { pkgs }: {
     home.username = "zeaman";
     home.homeDirectory = "/home/zeaman";
-    home.stateVersion = "24.05";
 
     programs.kitty = {
       enable = true;
@@ -14,6 +13,7 @@
       };
     };
 
+    home.stateVersion = "26.11";
     programs.home-manager.enable = true;
   };
 }
