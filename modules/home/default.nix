@@ -1,16 +1,12 @@
 { ... }:
 {
-  flake.homeModules.zeamanHomeConfig = { pkgs, ... }: {
+  flake.homeModules.zeamanHomeConfig = { ... }: {
     home.username = "zeaman";
     home.homeDirectory = "/home/zeaman";
 
-    programs.kitty = {
+    programs.starship = {
       enable = true;
-      font = {
-        package = pkgs.jetbrains-mono;
-        name = "JetBrains Mono";
-        size = 12.5;
-      };
+      enableFishIntegration = true;
     };
 
     home.stateVersion = "26.11";

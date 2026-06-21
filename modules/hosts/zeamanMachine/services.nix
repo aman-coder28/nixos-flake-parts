@@ -1,6 +1,6 @@
 { ... }: {
 
-  flake.nixosModules.zeamanMachineConfig = { ... }: {
+  flake.nixosModules.Services = { ... }: {
     services.xserver.enable = true;
     services.displayManager.gdm = {
       enable = true;
