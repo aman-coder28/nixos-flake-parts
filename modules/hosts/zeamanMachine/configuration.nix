@@ -1,9 +1,18 @@
-{ self, ... }: {
+{ self, inputs, ... }: {
 
   flake.nixosModules.zeamanMachineConfig = { pkgs, ... }: {
     imports = [
       self.nixosModules.zeamanMachineHardware
       self.nixosModules.niri
+
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          extraSpecialArgs = { inherit inputs; };
+          users.zeaman = self.homeMoodule.zeamanHomeConfig;
+        };
+      }
     ];
 
     boot.loader.systemd-boot.enable = true;
@@ -53,6 +62,10 @@
       enableBashIntegration = true;
     };
     programs.starship.enable = true;
+
+    environment.systemPackages = with pkgs; [
+      kitty
+    ];
 
     users.users.zeaman = {
       isNormalUser = true;
