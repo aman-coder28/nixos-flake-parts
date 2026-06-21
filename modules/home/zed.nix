@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.zeamanHomeConfig = { pkgs, ... }: {
+  flake.homeModules.ZedConfig = { pkgs, ... }: {
     programs.zed-editor = {
       enable = true;
 

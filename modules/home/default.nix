@@ -1,8 +1,13 @@
-{ ... }:
+{ self, ... }:
 {
   flake.homeModules.zeamanHomeConfig = { ... }: {
     home.username = "zeaman";
     home.homeDirectory = "/home/zeaman";
+
+    imports = [
+      self.homeModules.ZedConfig
+      self.homeModules.AlacrittyConfig
+    ];
 
     programs.starship = {
       enable = true;

@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.zeamanHomeConfig = { pkgs, ... }: {
+  flake.homeModules.AlacrittyConfig = { pkgs, ... }: {
     programs.alacritty = {
       enable = true;
       theme = "one_dark";
