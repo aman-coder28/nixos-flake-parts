@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.homeMoodule.zeamanHomeConfig = { pkgs }: {
+  flake.homeModules.zeamanHomeConfig = { pkgs }: {
     home.username = "zeaman";
     home.homeDirectory = "/home/zeaman";
 

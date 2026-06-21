@@ -9,7 +9,7 @@
           useGlobalPkgs = true;
           useUserPackages = true;
           extraSpecialArgs = { inherit inputs; };
-          users.zeaman = self.homeMoodule.zeamanHomeConfig;
+          users.zeaman = self.homeModules.zeamanHomeConfig;
         };
       }
     ];
