@@ -1,23 +1,6 @@
 { self, inputs, ... }: {
 
   flake.nixosModules.zeamanMachineConfig = { pkgs, ... }: {
-    imports = [
-      self.nixosModules.zeamanMachineHardware
-      self.nixosModules.Settings
-      self.nixosModules.Services
-      self.nixosModules.SysPackages
-      self.nixosModules.niri
-      inputs.home-manager.nixosModules.home-manager
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = { inherit inputs; };
-          users.zeaman = self.homeModules.zeamanHomeConfig;
-        };
-      }
-    ];
-
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
     boot.kernelPackages = pkgs.linuxPackages_zen;

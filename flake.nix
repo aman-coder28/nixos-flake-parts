@@ -30,11 +30,6 @@
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         inputs.home-manager.flakeModules.home-manager
-        {
-          nixpkgs.overlays = [
-            inputs.helium-flake.overlays.default
-          ];
-        }
         (inputs.import-tree ./modules)
       ];
     };
