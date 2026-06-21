@@ -15,31 +15,23 @@
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-<<<<<<< HEAD
-    # home-manager = {
-    #   url = "github:nix-community/home-manager";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-=======
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
->>>>>>> a2ea15c (Setup Home Manager)
   };
 
   outputs =
     inputs:
-    inputs.flake-parts.lib.mkFlake {
-      inherit inputs;
-<<<<<<< HEAD
-    } (inputs.import-tree ./modules);
-=======
-    } {
-      imports = [
-        # inputs.home-manager.flakeModules.home-manager
-        (inputs.import-tree ./modules)
-      ];
-    };
->>>>>>> a2ea15c (Setup Home Manager)
+    inputs.flake-parts.lib.mkFlake
+      {
+        inherit inputs;
+      }
+      {
+        imports = [
+          inputs.home-manager.flakeModules.home-manager
+          (inputs.import-tree ./modules)
+        ];
+      };
 }
