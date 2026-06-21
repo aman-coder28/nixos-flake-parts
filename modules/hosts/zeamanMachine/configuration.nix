@@ -4,7 +4,6 @@
     imports = [
       self.nixosModules.zeamanMachineHardware
       self.nixosModules.niri
-
       {
         home-manager = {
           useGlobalPkgs = true;
