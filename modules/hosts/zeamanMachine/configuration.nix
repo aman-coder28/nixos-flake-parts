@@ -46,6 +46,13 @@
     };
 
     programs.fish.enable = true;
+    # programs.firefox.enable = true;
+    programs.zoxide = {
+      enable = true;
+      enableFishIntegration = true;
+      enableBashIntegration = true;
+    };
+    programs.starship.enable = true;
 
     users.users.zeaman = {
       isNormalUser = true;
@@ -72,6 +79,28 @@
       "nix-command"
       "flakes"
     ];
+
+    nix.gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+
+    nix.optimise = {
+      automatic = true;
+      dates = "03:45";
+    };
+
+    fonts.packages = with pkgs; [
+      jetbrains-mono
+      fira-code
+      fira-code-symbols
+      inter
+    ];
+
+    environment.sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+    };
 
     system.stateVersion = "26.11";
   };
