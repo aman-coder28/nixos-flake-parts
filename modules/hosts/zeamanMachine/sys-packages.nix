@@ -43,7 +43,7 @@
       pavucontrol
       proton-vpn
       xwayland-satellite
-      transmission_4-gtk
+      transmission_4-qt6
       geary
       peazip
       nwg-look
@@ -65,6 +65,9 @@
       font-awesome_7
 
       libreoffice-fresh
+      onlyoffice-desktopeditors
+      beekeeper-studio
+      # jetbrains.datagrip
     ];
 
     fonts.packages = with pkgs; [

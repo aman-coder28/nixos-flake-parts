@@ -1,6 +1,6 @@
 { ... }: {
 
-  flake.nixosModules.Services = { ... }: {
+  flake.nixosModules.Services = { pkgs, ... }: {
     services.xserver.enable = true;
     services.displayManager.gdm = {
       enable = true;
@@ -29,5 +29,42 @@
     };
     services.upower.enable = true;
     hardware.bluetooth.enable = true;
+
+    services.mysql = {
+      enable = true;
+      package = pkgs.mariadb;
+      ensureDatabases = [ "learning" ];
+      # ensureUsers = [
+      #   {
+      #     name = "learning";
+      #     ensureDBOwnership = true;
+      #     ensureClauses = {
+      #       login = true;
+      #       password = "password";
+      #     };
+      #   }
+      # ];
+    };
+
+    services.postgresql = {
+      enable = true;
+      ensureDatabases = [ "tudos" ];
+      enableTCPIP = true;
+      authentication = pkgs.lib.mkOverride 10 ''
+        local all      all     trust
+        host  all      all     127.0.0.1/32   trust
+        host  all      all     ::1/128        trust
+      '';
+      ensureUsers = [
+        {
+          name = "tudos";
+          ensureDBOwnership = true;
+          ensureClauses = {
+            login = true;
+            password = "password";
+          };
+        }
+      ];
+    };
   };
 }

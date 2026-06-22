@@ -9,6 +9,14 @@
       self.homeModules.AlacrittyConfig
     ];
 
+    programs.cursor = {
+      enable = true;
+      mutableExtensionsDir = true;
+      argvSettings = {
+        enable-crash-reporter = false;
+      };
+    };
+
     programs.starship = {
       enable = true;
       enableFishIntegration = true;

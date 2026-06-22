@@ -18,6 +18,7 @@
           useGlobalPkgs = true;
           useUserPackages = true;
           extraSpecialArgs = { inherit inputs; };
+          backupFileExtension = "backup";
           users.zeaman = self.homeModules.zeamanHomeConfig;
         };
       }

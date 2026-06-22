@@ -24,7 +24,7 @@
           };
 
           spawn-at-startup = [
-            "/nix/store/67sssfz42v7g9y030hc3niinr29sy7qm-mate-polkit-1.28.1/libexec/polkit-mate-authentication-agent-1"
+            "${pkgs.mate-polkit}/libexec/polkit-mate-authentication-agent-1"
 
             (lib.getExe self'.packages.myNoctalia)
             (lib.getExe pkgs.hypridle)
