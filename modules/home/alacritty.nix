@@ -2,8 +2,6 @@
   flake.homeModules.AlacrittyConfig = { pkgs, ... }: {
     programs.alacritty = {
       enable = true;
-      theme = "one_dark";
-      themePackage = pkgs.alacritty-theme;
 
       settings = {
         window = {

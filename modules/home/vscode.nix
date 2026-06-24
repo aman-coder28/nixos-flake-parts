@@ -1,6 +1,5 @@
-{ ... }:
 {
-  flake.homeModules.vsCodeConfig = { pkgs, ... }: {
+  flake.homeModules.VSCodeConfig = { pkgs, ... }: {
     programs.vscode = {
       enable = true;
       profiles = {

@@ -7,16 +7,8 @@
     imports = [
       self.homeModules.ZedConfig
       self.homeModules.AlacrittyConfig
-      self.homeModules.vsCodeConfig
+      self.homeModules.VSCodeConfig
     ];
-
-    programs.cursor = {
-      enable = true;
-      mutableExtensionsDir = true;
-      argvSettings = {
-        enable-crash-reporter = false;
-      };
-    };
 
     programs.starship = {
       enable = true;
