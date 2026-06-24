@@ -1,7 +1,8 @@
 { ... }:
 {
-  flake.homeModules.vsCodeConfig = { ... }: {
+  flake.homeModules.vsCodeConfig = { pkgs, ... }: {
     programs.vscode = {
+      package = pkgs.code-cursor;
       enable = true;
 
       extensions = with pkgs.vscode-extensions; [
