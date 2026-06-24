@@ -1,5 +1,7 @@
 { self, inputs, ... }: {
   flake.nixosModules.niri = { pkgs, ... }: {
+    nixpkgs.config.allowUnfree = true;
+
     programs.niri = {
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
@@ -14,6 +16,7 @@
       ...
     }:
     {
+
       packages.myNiri = inputs.wrapper-modules.wrappers.niri.wrap {
         inherit pkgs;
 
@@ -92,10 +95,10 @@
             "Mod+E".spawn = lib.getExe pkgs.nautilus;
             "Mod+B".spawn = "helium";
             "Mod+H".spawn-sh = "noctalia msg panel-toggle clipboard";
-            # "Mod+C".spawn = lib.getExe pkgs.code-cursor;
+            "Mod+C".spawn = "cursor";
             "Mod+M".spawn = lib.getExe pkgs.gnome-system-monitor;
             "Mod+T".spawn = lib.getExe pkgs.gnome-text-editor;
-            # "Mod+L".spawn = lib.getExe pkgs.libreoffice-fresh;
+            "Mod+L".spawn = lib.getExe pkgs.libreoffice-fresh;
             "Mod+W".spawn-sh = "noctalia msg panel-toggle wallpaper";
             "Mod+S".spawn-sh = "noctalia msg panel-toggle control-center";
             "Super+Alt+L".spawn = lib.getExe pkgs.hyprlock;

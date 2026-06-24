@@ -1,0 +1,100 @@
+{
+  "chat.agent.enabled": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  "explorer.excludeGitIgnore": true,
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.fontSize": 16.5,
+  "editor.fontFamily": "jetbrains mono",
+  "editor.wordWrap": "bounded",
+  "editor.tabSize": 2,
+  "editor.fontVariations": true,
+  "editor.fontWeight": "335",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "chat.disableAIFeatures": true,
+  "terminal.integrated.fontLigatures.enabled": true,
+  "explorer.confirmDelete": false,
+  "sqltools.connectionExplorer.groupConnected": true,
+  "sqltools.results.reuseTabs": "connection",
+  "git.autofetch": true,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "terminal.integrated.lineHeight": 1.2,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
+  "editor.wordWrapColumn": 100,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "editor.experimental.preferTreeSitter.typescript": true,
+  "terminal.integrated.fontWeight": "normal",
+  "workbench.editor.enablePreview": false,
+  "editor.formatOnPaste": true,
+  "editor.minimap.autohide": true,
+  "cursor.cpp.disabledLanguages": ["markdown", "plaintext", "json"],
+  "editor.fontLigatures": true,
+  "cursor.general.fontSmoothingAntialiased": true,
+  "terminal.integrated.fontFamily": "jetbrains mono",
+  "terminal.integrated.fontSize": 15,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "oxc.enable.oxfmt": true,
+  "oxc.fixKind": "safe_fix_or_suggestion",
+  "oxc.unusedDisableDirectives": "warn",
+  "oxc.typeAware": true,
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools",
+  },
+  "editor.linkedEditing": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+  },
+  "redhat.telemetry.enabled": false,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+  },
+  "[nix]": {
+    "editor.defaultFormatter": "jnoortheen.nix-ide",
+  },
+  "nix.enableLanguageServer": true,
+  "nix.formatterPath": "nixfmt",
+  "nix.serverSettings": {
+    "nixd": {
+      "nixpkgs": {
+        "expr": "import <nixpkgs> { }",
+      },
+      "formatting": {
+        "command": ["nixfmt"],
+      },
+      "options": {
+        "nixos": {
+          "expr": "(builtins.getFlake (builtins.toString \"/etc/nixos\")).nixosConfigurations.<name>.options",
+        },
+        "home-manager": {
+          "expr": "(builtins.getFlake (builtins.toString \"/etc/nixos\")).nixosConfigurations.zeaman.options.home-manager.users.type.getSubOptions []",
+        },
+      },
+    },
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "marko": "html"
+  },
+  "emmet.includeLanguages": {
+    "marko": "html"
+  },
+}

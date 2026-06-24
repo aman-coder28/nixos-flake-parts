@@ -12,7 +12,6 @@
         "emmet"
         "vue"
         "vscode-icons"
-        # "tsgo"
       ];
 
       userSettings = {

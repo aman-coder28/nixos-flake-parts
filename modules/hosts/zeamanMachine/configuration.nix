@@ -51,5 +51,7 @@
       ];
       shell = pkgs.fish;
     };
+
+    nixpkgs.config.allowUnfree = true;
   };
 }
