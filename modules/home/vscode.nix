@@ -4,7 +4,7 @@
     programs.vscode = {
       enable = true;
 
-      extensions = with pkgs.vscode-extensions;         [
+      extensions = with pkgs.vscode-extensions; [
         mtxr.sqltools
         mtxr.sqltools-driver-pg
         mtxr.sqltools-driver-mysql
