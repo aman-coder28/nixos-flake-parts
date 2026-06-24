@@ -1,36 +1,42 @@
 { ... }:
 {
-  flake.homeModules.vsCodeConfig = { pkgs, ... }: {
+  flake.homeModules.vsCodeConfig = { ... }: {
     programs.vscode = {
-      package = pkgs.code-cursor;
       enable = true;
+      profiles = {
+        default = {
+          userSettings = (builtins.fromJSON (builtins.readFile ./cursor-settings.json)) // {
+            "workbench.colorTheme" = "Cursor Dark Core";
+            "workbench.iconTheme" = "vscode-icons";
+            "workbench.activityBar.location" = "top";
+            "workbench.sideBar.location" = "left";
+            "window.commandCenter" = true;
 
-      extensions = with pkgs.vscode-extensions; [
-        mtxr.sqltools
-        mtxr.sqltools-driver-pg
-        mtxr.sqltools-driver-mysql
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-       {
-          name = "cursor-theme-vscode";
-          publisher = "BioHazard786";
-          version = "1.0.0";
-          sha256 = lib.fakeSha256;
-        }
-      ];
+            "editor.stickyScroll.enabled" = false;
+            "editor.formatOnSave" = true;
+            "editor.fontSize" = 16.5;
+            "editor.fontFamily" = "jetbrains mono";
+            "editor.wordWrap" = "bounded";
+            "editor.wordWrapColumn" = 100;
+            "editor.tabSize" = 2;
+            "editor.formatOnPaste" = true;
+            "editor.fontLigatures" = true;
+            "editor.fontWeight" = "335";
+            "editor.defaultFormatter" = "oxc.oxc-vscode";
+            "editor.bracketPairColorization.enabled" = false;
+            "editor.guides.bracketPairsHorizontal" = false;
+            "editor.guides.highlightActiveBracketPair" = false;
+            "breadcrumbs.enabled" = false;
 
-      userSettings = (builtins.fromJSON (builtins.readFile ./cursor-settings.json)) // {
-        "workbench.colorTheme" = "Cursor Dark";
-        "workbench.activityBar.location" = "default";
-        "workbench.sideBar.location" = "left";
-        "editor.minimap.enabled" = false;
-        "window.commandCenter" = false;
-        "github.copilot.enable" = { "*" = false; };
-        "telemetry.telemetryLevel" = "off";
+            "telemetry.telemetryLevel" = "off";
+          };
+          enableExtensionUpdateCheck = true;
+          enableUpdateCheck = true;
+        };
       };
 
       mutableExtensionsDir = true;
-      enableExtensionUpdateCheck = true;
-      enableUpdateCheck = true;
+
     };
   };
 }
