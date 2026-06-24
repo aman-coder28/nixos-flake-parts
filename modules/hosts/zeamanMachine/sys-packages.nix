@@ -24,6 +24,7 @@
       ghostty
       alacritty
       zed-editor
+      vscode
       nodejs_latest
       pnpm
       bun
