@@ -1,9 +1,13 @@
 { self, inputs, ... }: {
 
   flake.nixosModules.zeamanMachineConfig = { pkgs, ... }: {
+    nixpkgs.overlays = [
+      inputs.nix-cachyos-kernel.overlays.default
+    ];
+
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot.kernelPackages = pkgs.linuxPackages_zen;
+    boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-x86_64-v3;
 
     swapDevices = [
       {
