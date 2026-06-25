@@ -46,6 +46,12 @@
 
     programs.fish.enable = true;
 
+    systemd.user.services.mbsync.Unit.After = [ "sops-nix.service" ];
+
+    sops.defaultSopsFile = ./secrets/secrets.yaml;
+    sops.defaultSopsFormat = "yaml";
+    sops.age.keyFile = "/home/zeaman/.config/sops/age/keys.txt";
+
     users.users.zeaman = {
       isNormalUser = true;
       description = "ZeAman";

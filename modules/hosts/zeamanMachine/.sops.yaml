@@ -1,0 +1,7 @@
+keys:
+  - &zeaman age1yptgwn0us0wfpwrud30zc47prcq6ptnwwr3adr5nz3280fh7fpvqgaw7fk
+creation_rules:
+  - path_regex: secrets/secrets.yaml$
+    key_groups:
+      - age:
+          - *zeaman

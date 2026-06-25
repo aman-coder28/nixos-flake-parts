@@ -8,6 +8,7 @@
       self.nixosModules.SysPackages
       self.nixosModules.niri
       inputs.home-manager.nixosModules.home-manager
+      inputs.sops-nix.nixosModules.sops
       {
         nixpkgs.overlays = [
           inputs.helium-flake.overlays.default

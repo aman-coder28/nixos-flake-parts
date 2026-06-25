@@ -29,6 +29,8 @@
       pnpm
       bun
       gcc
+      go
+      gopls
       helium
       nixd
       nil
@@ -39,12 +41,14 @@
       xhost
 
       hypridle
+      fastfetch
       hyprlock
       mate-polkit
       pavucontrol
       proton-vpn
       xwayland-satellite
       transmission_4-qt6
+      sops
       geary
       peazip
       nwg-look

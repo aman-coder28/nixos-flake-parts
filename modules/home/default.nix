@@ -6,7 +6,6 @@
 
     imports = [
       self.homeModules.ZedConfig
-      self.homeModules.AlacrittyConfig
       self.homeModules.VSCodeConfig
     ];
 
