@@ -34,16 +34,6 @@
       enable = true;
       package = pkgs.mariadb;
       ensureDatabases = [ "learning" ];
-      # ensureUsers = [
-      #   {
-      #     name = "learning";
-      #     ensureDBOwnership = true;
-      #     ensureClauses = {
-      #       login = true;
-      #       password = "password";
-      #     };
-      #   }
-      # ];
     };
 
     services.postgresql = {
