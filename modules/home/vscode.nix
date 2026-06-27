@@ -4,34 +4,32 @@
       enable = true;
       profiles = {
         default = {
-          extensions =
-            with pkgs.vscode-extensions;
-            [
-              jnoortheen.nix-ide
-              oxc.oxc-vscode
-              vscode-icons-team.vscode-icons
-              vue.volar
-            ]
-            ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-              {
-                name = "sqltools";
-                publisher = "mtxr";
-                version = "0.28.5";
-                sha256 = "sha256-ExeerCI5yDa/DJqNOwENDjw+xhMPNil6JgCAUNdTXy8=";
-              }
-              {
-                name = "sqltools-driver-pg";
-                publisher = "mtxr";
-                version = "0.5.7";
-                sha256 = "sha256-TZ5KMjSafdJozKuUL6IatHyChk/b4b27JcuOe1Qtnyw=";
-              }
-              {
-                name = "sqltools-driver-mysql";
-                publisher = "mtxr";
-                version = "0.6.6";
-                sha256 = "sha256-LnGaMomXuXsuDjGn1tTQy4nfHtN/SMGUgDngm+O9c/o=";
-              }
-            ];
+          extensions = with pkgs.vscode-extensions; [
+            jnoortheen.nix-ide
+            oxc.oxc-vscode
+            vscode-icons-team.vscode-icons
+            vue.volar
+          ];
+          # ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          #   {
+          #     name = "sqltools";
+          #     publisher = "mtxr";
+          #     version = "0.28.5";
+          #     sha256 = "sha256-ExeerCI5yDa/DJqNOwENDjw+xhMPNil6JgCAUNdTXy8=";
+          #   }
+          #   {
+          #     name = "sqltools-driver-pg";
+          #     publisher = "mtxr";
+          #     version = "0.5.7";
+          #     sha256 = "sha256-TZ5KMjSafdJozKuUL6IatHyChk/b4b27JcuOe1Qtnyw=";
+          #   }
+          #   {
+          #     name = "sqltools-driver-mysql";
+          #     publisher = "mtxr";
+          #     version = "0.6.6";
+          #     sha256 = "sha256-LnGaMomXuXsuDjGn1tTQy4nfHtN/SMGUgDngm+O9c/o=";
+          #   }
+          # ];
 
           userSettings = (builtins.fromJSON (builtins.readFile ./cursor-settings.json)) // {
             "workbench.colorTheme" = "Cursor Dark Core";
