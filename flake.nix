@@ -1,18 +1,18 @@
 {
   nixConfig = {
-    trusted-users = [
+    extra-trusted-users = [
       "root"
       "zeaman"
     ];
-    substituters = [
+    extra-substituters = [
       "https://noctalia.cachix.org"
       "https://attic.xuyh0120.win/lantian"
     ];
-    trusted-substituters = [
+    extra-trusted-substituters = [
       "https://noctalia.cachix.org"
       "https://attic.xuyh0120.win/lantian"
     ];
-    trusted-public-keys = [
+    extra-trusted-public-keys = [
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
       "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
     ];
