@@ -1,23 +1,27 @@
-{ inputs, ... }: {
+{ ... }: {
 
   flake.nixosModules.zeamanMachineConfig = { pkgs, ... }: {
-    nixpkgs.overlays = [
-      inputs.nix-cachyos-kernel.overlays.pinned
-    ];
-
     boot.loader.systemd-boot.enable = true;
-    boot.loader.timeout = 0;
+    boot.loader.timeout = 2;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-x86_64-v3;
+    boot.kernelPackages = pkgs.linuxPackages_latest;
+
+    boot.initrd = {
+      verbose = false;
+      systemd.services.plymouth-start = {
+        after = [ "systemd-modules-load.service" ];
+        requires = [ "systemd-modules-load.service" ];
+      };
+    };
 
     boot = {
       kernelParams = [
         "quiet"
         "splash"
-        "console=/dev/null"
+        # "console=/dev/null"
       ];
+
       consoleLogLevel = 3;
-      initrd.verbose = false;
 
       plymouth = {
         enable = true;

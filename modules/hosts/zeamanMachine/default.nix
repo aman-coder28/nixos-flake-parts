@@ -8,6 +8,7 @@
       self.nixosModules.SysPackages
       self.nixosModules.Security
       # self.nixosModules.Steam
+      inputs.noctalia-greeter.nixosModules.default
       self.nixosModules.niri
       inputs.home-manager.nixosModules.home-manager
       inputs.sops-nix.nixosModules.sops

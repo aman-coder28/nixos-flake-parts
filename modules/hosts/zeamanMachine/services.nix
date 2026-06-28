@@ -1,9 +1,9 @@
-{ ... }: {
+{ inputs, ... }: {
 
   flake.nixosModules.Services = { pkgs, ... }: {
     # services.xserver.enable = true;
     services.displayManager.gdm = {
-      enable = true;
+      enable = false;
     };
     services.desktopManager.gnome.enable = true;
 
@@ -11,6 +11,17 @@
     #   layout = "us";
     #   variant = "";
     # };
+
+    programs.noctalia-greeter = {
+      enable = true;
+      package = inputs.noctalia-greeter.packages.${pkgs.stdenv.hostPlatform.system}.default;
+
+      settings.cursor = {
+        theme = "macOS";
+        size = 24;
+        package = pkgs.apple-cursor;
+      };
+    };
 
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;

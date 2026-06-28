@@ -1,5 +1,4 @@
 { ... }: {
-
   flake.nixosModules.SysPackages = { pkgs, ... }: {
     programs.firefox.enable = true;
     programs.zoxide = {
@@ -28,7 +27,6 @@
       nodejs_latest
       glibc
       pnpm
-      bun
       gcc
       go
       gopls
