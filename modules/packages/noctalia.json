@@ -305,44 +305,6 @@
       ]
     }
   },
-  "desktopWidgets": {
-    "enabled": false,
-    "gridSnap": false,
-    "gridSnapScale": false,
-    "monitorWidgets": [],
-    "overviewEnabled": true
-  },
-  "dock": {
-    "animationSpeed": 1,
-    "backgroundOpacity": 1,
-    "colorizeIcons": false,
-    "deadOpacity": 0.6,
-    "displayMode": "auto_hide",
-    "dockType": "attached",
-    "enabled": false,
-    "floatingRatio": 1,
-    "groupApps": false,
-    "groupClickAction": "cycle",
-    "groupContextMenuMode": "extended",
-    "groupIndicatorStyle": "dots",
-    "inactiveIndicators": false,
-    "indicatorColor": "primary",
-    "indicatorOpacity": 0.6,
-    "indicatorThickness": 6,
-    "launcherIcon": "",
-    "launcherIconColor": "none",
-    "launcherPosition": "end",
-    "launcherUseDistroLogo": false,
-    "monitors": [],
-    "onlySameOutput": true,
-    "pinnedApps": [],
-    "pinnedStatic": false,
-    "position": "bottom",
-    "showDockIndicator": true,
-    "showLauncherIcon": false,
-    "sitOnFrame": false,
-    "size": 1.1500000000000001
-  },
   "general": {
     "allowPanelsOnScreenWithoutBar": true,
     "allowPasswordWithFprintd": false,
@@ -406,32 +368,6 @@
     "showSessionButtonsOnLockScreen": true,
     "smoothScrollEnabled": true,
     "telemetryEnabled": false
-  },
-  "hooks": {
-    "colorGeneration": "",
-    "darkModeChange": "",
-    "enabled": false,
-    "performanceModeDisabled": "",
-    "performanceModeEnabled": "",
-    "screenLock": "",
-    "screenUnlock": "",
-    "session": "",
-    "startup": "",
-    "wallpaperChange": ""
-  },
-  "idle": {
-    "customCommands": "[]",
-    "enabled": false,
-    "fadeDuration": 5,
-    "lockCommand": "",
-    "lockTimeout": 660,
-    "resumeLockCommand": "",
-    "resumeScreenOffCommand": "",
-    "resumeSuspendCommand": "",
-    "screenOffCommand": "",
-    "screenOffTimeout": 600,
-    "suspendCommand": "",
-    "suspendTimeout": 1800
   },
   "location": {
     "analogClockInCalendar": false,
@@ -504,23 +440,6 @@
       "separateSounds": false,
       "volume": 0.3
     }
-  },
-  "osd": {
-    "autoHideMs": 2000,
-    "backgroundOpacity": 1,
-    "enabled": true,
-    "enabledTypes": [
-      0,
-      1,
-      2
-    ],
-    "location": "top_right",
-    "monitors": [],
-    "overlayLayer": true
-  },
-  "plugins": {
-    "autoUpdate": false,
-    "notifyUpdates": false
   },
   "sessionMenu": {
     "countdownDuration": 10000,
@@ -612,15 +531,6 @@
     "tempWarningThreshold": 80,
     "useCustomColors": false,
     "warningColor": ""
-  },
-  "templates": {
-    "activeTemplates": [
-      {
-        "enabled": true,
-        "id": "alacritty"
-      }
-    ],
-    "enableUserTheming": false
   },
   "ui": {
     "boxBorderEnabled": false,

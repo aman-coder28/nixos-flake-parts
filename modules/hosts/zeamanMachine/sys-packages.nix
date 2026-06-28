@@ -35,7 +35,7 @@
       nil
       nixfmt
       nixfmt-tree
-      github-cli
+      gh
       gparted
       xhost
 
