@@ -95,7 +95,8 @@
             "Mod+E".spawn = lib.getExe pkgs.nautilus;
             "Mod+B".spawn = "helium";
             "Mod+H".spawn-sh = "noctalia msg panel-toggle clipboard";
-            "Mod+C".spawn = "code";
+            "Mod+C".spawn = "cursor";
+            "Mod+K".spawn = "code";
             "Mod+M".spawn = lib.getExe pkgs.gnome-system-monitor;
             "Mod+T".spawn = lib.getExe pkgs.gnome-text-editor;
             "Mod+L".spawn = lib.getExe pkgs.libreoffice-fresh;

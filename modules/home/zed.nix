@@ -43,10 +43,10 @@
         };
         format_on_save = "on";
         formatter = "language_server";
-        ui_font_size = 16;
+        ui_font_size = 15.6;
         ui_font_family = "Adwaita Sans";
         ui_font_weight = 300;
-        buffer_font_size = 16.2;
+        buffer_font_size = 15.8;
         buffer_font_family = "JetBrains Mono";
         buffer_font_weight = 395;
         tab_size = 2;
