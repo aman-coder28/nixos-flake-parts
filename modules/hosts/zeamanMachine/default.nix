@@ -7,6 +7,7 @@
       self.nixosModules.Services
       self.nixosModules.SysPackages
       self.nixosModules.Security
+      self.nixosModules.Steam
       self.nixosModules.niri
       inputs.home-manager.nixosModules.home-manager
       inputs.sops-nix.nixosModules.sops

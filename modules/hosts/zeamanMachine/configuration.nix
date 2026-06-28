@@ -9,6 +9,23 @@
     boot.loader.efi.canTouchEfiVariables = true;
     boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-x86_64-v3;
 
+    boot = {
+      kernelParams = [
+        "quiet"
+        "splash"
+        "console=/dev/null"
+      ];
+      plymouth = {
+        enable = true;
+        theme = "red_loader";
+        themePackages = with pkgs; [
+          (adi1090x-plymouth-themes.override {
+            selected_themes = [ "red_loader" ];
+          })
+        ];
+      };
+    };
+
     swapDevices = [
       {
         device = "/var/lib/swapfile";
