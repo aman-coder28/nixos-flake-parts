@@ -8,10 +8,6 @@
       "https://noctalia.cachix.org"
       "https://attic.xuyh0120.win/lantian"
     ];
-    extra-trusted-substituters = [
-      "https://noctalia.cachix.org"
-      "https://attic.xuyh0120.win/lantian"
-    ];
     extra-trusted-public-keys = [
       "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
       "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
@@ -23,11 +19,8 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    noctalia.url = "github:noctalia-dev/noctalia/cachix";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

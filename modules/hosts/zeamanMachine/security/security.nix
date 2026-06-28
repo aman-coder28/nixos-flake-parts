@@ -1,7 +1,7 @@
 { self, ... }: {
   flake.nixosModules.Security = { ... }: {
     imports = [
-      self.nixosModules.AppArmor
+      # self.nixosModules.AppArmor
     ];
 
     networking.firewall = {
