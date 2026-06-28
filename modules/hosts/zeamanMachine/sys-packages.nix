@@ -71,7 +71,6 @@
       libreoffice-fresh
       onlyoffice-desktopeditors
       beekeeper-studio
-      # jetbrains.datagrip
     ];
 
     fonts.packages = with pkgs; [

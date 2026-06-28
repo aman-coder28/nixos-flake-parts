@@ -1,16 +1,10 @@
 { inputs, ... }: {
 
   flake.nixosModules.Services = { pkgs, ... }: {
-    # services.xserver.enable = true;
     services.displayManager.gdm = {
       enable = false;
     };
     services.desktopManager.gnome.enable = true;
-
-    # services.xserver.xkb = {
-    #   layout = "us";
-    #   variant = "";
-    # };
 
     programs.noctalia-greeter = {
       enable = true;

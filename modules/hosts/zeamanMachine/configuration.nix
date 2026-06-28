@@ -18,7 +18,6 @@
       kernelParams = [
         "quiet"
         "splash"
-        # "console=/dev/null"
       ];
 
       consoleLogLevel = 3;

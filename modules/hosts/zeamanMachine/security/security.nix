@@ -29,12 +29,6 @@
       logRefusedConnections = true;
     };
 
-    # services.resolved = {
-    #   enable = true;
-    #   dnssec = "true";
-    #   dnsovertls = "true";
-    # };
-
     security.sudo = {
       enable = true;
       wheelNeedsPassword = true;
@@ -42,7 +36,6 @@
     };
 
     boot.loader.systemd-boot.editor = false;
-    # boot.loader.timeout = 5;
 
     boot.kernel.sysctl = {
       # Network
