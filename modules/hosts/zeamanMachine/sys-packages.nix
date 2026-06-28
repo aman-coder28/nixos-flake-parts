@@ -26,6 +26,7 @@
       zed-editor
       vscode
       nodejs_latest
+      glibc
       pnpm
       bun
       gcc

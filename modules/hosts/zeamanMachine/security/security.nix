@@ -42,7 +42,7 @@
     };
 
     boot.loader.systemd-boot.editor = false;
-    boot.loader.timeout = 5;
+    # boot.loader.timeout = 5;
 
     boot.kernel.sysctl = {
       # Network

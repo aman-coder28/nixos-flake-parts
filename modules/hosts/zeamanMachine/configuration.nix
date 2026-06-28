@@ -6,6 +6,7 @@
     ];
 
     boot.loader.systemd-boot.enable = true;
+    boot.loader.timeout = 0;
     boot.loader.efi.canTouchEfiVariables = true;
     boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-x86_64-v3;
 
@@ -15,12 +16,15 @@
         "splash"
         "console=/dev/null"
       ];
+      consoleLogLevel = 3;
+      initrd.verbose = false;
+
       plymouth = {
         enable = true;
-        theme = "rings";
+        theme = "red_loader";
         themePackages = with pkgs; [
           (adi1090x-plymouth-themes.override {
-            selected_themes = [ "rings" ];
+            selected_themes = [ "red_loader" ];
           })
         ];
       };
