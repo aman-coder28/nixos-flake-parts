@@ -17,10 +17,10 @@
       ];
       plymouth = {
         enable = true;
-        theme = "red_loader";
+        theme = "rings";
         themePackages = with pkgs; [
           (adi1090x-plymouth-themes.override {
-            selected_themes = [ "red_loader" ];
+            selected_themes = [ "rings" ];
           })
         ];
       };
