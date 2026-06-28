@@ -53,6 +53,8 @@
       nwg-look
       vlc
       amberol
+      clamav
+      clamtk
 
       mariadb
       wl-clipboard

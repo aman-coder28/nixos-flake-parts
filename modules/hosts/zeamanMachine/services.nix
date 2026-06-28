@@ -17,6 +17,9 @@
       };
     };
 
+    services.clamav.daemon.enable = true;
+    services.clamav.updater.enable = true;
+
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
