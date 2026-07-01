@@ -2,6 +2,7 @@
   flake.nixosModules.niri = { pkgs, ... }: {
     environment.systemPackages = [
       self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia
+      self.packages.${pkgs.stdenv.hostPlatform.system}.tableplus
     ];
   };
 
@@ -17,5 +18,7 @@
 
         settings = builtins.fromJSON (builtins.readFile ./noctalia.json);
       };
+
+      tableplus = pkgs.callPackage ./tableplus.nix { };
     };
 }
