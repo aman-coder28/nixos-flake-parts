@@ -17,8 +17,17 @@
       };
     };
 
-    services.clamav.daemon.enable = true;
-    services.clamav.updater.enable = true;
+    services.clamav = {
+      daemon.enable = true;
+      updater.enable = true;
+      scanner.enable = true;
+      clamonacc.enable = true;
+
+      daemon.settings = {
+        OnAccessPrevention = true;
+        OnAccessIncludePath = "/home/beaman/Downloads";
+      };
+    };
 
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;

@@ -28,6 +28,8 @@
       glibc
       pnpm
       gcc
+      # clang
+      # clang-tools
       go
       gopls
       helium
@@ -73,6 +75,7 @@
       libreoffice-fresh
       onlyoffice-desktopeditors
       beekeeper-studio
+      (pkgs.callPackage ./tableplus.nix { })
     ];
 
     fonts.packages = with pkgs; [
