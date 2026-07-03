@@ -1,6 +1,6 @@
 { ... }: {
 
-  flake.nixosModules.zeamanMachineConfig = { pkgs, ... }: {
+  flake.nixosModules.zeamanMachineConfig = { pkgs, lib, ... }: {
     boot.loader.systemd-boot.enable = true;
     boot.loader.timeout = 2;
     boot.loader.efi.canTouchEfiVariables = true;
@@ -49,6 +49,14 @@
     networking.hostName = "zeamanMachine";
     networking.networkmanager.enable = true;
 
+    nixpkgs.config.allowUnfree = true;
+
+    nixpkgs.config.allowUnfreePredicate =
+      pkg:
+      builtins.elem (lib.getName pkg) [
+        "tableplus"
+      ];
+
     time.timeZone = "Africa/Nairobi";
     i18n.defaultLocale = "en_US.UTF-8";
 
@@ -83,7 +91,5 @@
       ];
       shell = pkgs.fish;
     };
-
-    nixpkgs.config.allowUnfree = true;
   };
 }

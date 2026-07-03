@@ -75,7 +75,6 @@
       libreoffice-fresh
       onlyoffice-desktopeditors
       beekeeper-studio
-      (pkgs.callPackage ./tableplus.nix { })
     ];
 
     fonts.packages = with pkgs; [
