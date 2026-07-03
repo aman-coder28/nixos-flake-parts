@@ -21,7 +21,6 @@
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
     wrapper-modules.inputs.nixpkgs.follows = "nixpkgs";
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
-    noctalia.inputs.nixpkgs.follows = "nixpkgs";
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
