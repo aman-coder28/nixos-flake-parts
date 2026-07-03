@@ -9,6 +9,7 @@
       self.nixosModules.Security
       inputs.noctalia-greeter.nixosModules.default
       self.nixosModules.niri
+      self.nixosModules.noctalia
       inputs.home-manager.nixosModules.home-manager
       inputs.sops-nix.nixosModules.sops
       {

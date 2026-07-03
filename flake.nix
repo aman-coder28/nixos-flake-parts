@@ -15,11 +15,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    flake-parts.inputs.nixpkgs.follows = "nixpkgs";
     import-tree.url = "github:vic/import-tree";
-    import-tree.inputs.nixpkgs.follows = "nixpkgs";
-    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
-    wrapper-modules.inputs.nixpkgs.follows = "nixpkgs";
+    wrapper-modules = {
+      url = "github:BirdeeHub/nix-wrapper-modules";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     noctalia.url = "github:noctalia-dev/noctalia/cachix";
     noctalia-greeter = {
       url = "github:noctalia-dev/noctalia-greeter";
