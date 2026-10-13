@@ -4,6 +4,10 @@
     home.username = "zeaman";
     home.homeDirectory = "/home/zeaman";
 
+    home.useGlobalPkgs = true;
+    home.useUserPackages = true;
+    home.backupFileExtension = "backup";
+
     imports = [
       self.homeModules.ZedConfig
     ];

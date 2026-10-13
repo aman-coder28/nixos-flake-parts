@@ -1,16 +1,10 @@
-{ self, ... }:
+{ self, inputs, ... }:
 {
-	flake.homeConfigurations = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs { system = "x86_64-linux"; };
-      modules = [
-       	{
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          extraSpecialArgs = { inherit inputs; };
-          backupFileExtension = "backup";
-          users.zeaman = self.homeModules.zeamanHomeConfig;
-        };
-      ];
-    };
+  flake.homeConfigurations.zeaman = inputs.home-manager.lib.homeManagerConfiguration {
+    pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+
+    extraSpecialArgs = { inherit inputs; };
+
+    modules = [ self.homeModules.zeamanHomeConfig ];
   };
 }
