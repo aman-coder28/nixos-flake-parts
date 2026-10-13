@@ -17,64 +17,88 @@
     };
 
     environment.systemPackages = with pkgs; [
-      git
-      postgresql
-      code-cursor
+      kitty
       ghostty
       alacritty
       zed-editor
       vscode
+
+      git
+      gh
+      forgejo-cli
       nodejs_latest
-      glibc
       pnpm
       gcc
-      # clang
-      # clang-tools
+      cmake
+      llvmPackages_23.clang
+      llvmPackages_23.clang-tools
       go
       gopls
-      helium
+      podman
+
+      bat
+      eza
+      atuin
+      starship
+      zoxide
       nixd
       nil
       nixfmt
       nixfmt-tree
-      gh
-      gparted
-      xhost
 
+      hyprland
+      hyprpicker
+      hyprland-qt-support
+      xdg-desktop-portal-hyprland
+      hyprland-qtutils
       hypridle
-      fastfetch
-      hyprlock
-      mate-polkit
-      pavucontrol
-      proton-vpn
-      xwayland-satellite
-      transmission_4-qt6
-      sops
-      geary
-      peazip
-      nwg-look
-      vlc
-      amberol
-      clamav
-      clamtk
+      noctalia
+      noctalia-greeter
+      niri
 
-      mariadb
+      quickshell
+      qt6.qtdeclarative
+      qt6.qtmultimedia
+      qt5.qtgraphicaleffects
+      qt6.qtsvg
+
+      xwayland-satellite
+      mate-polkit
+      nwg-look
+      pavucontrol
       wl-clipboard
       cliphist
       pamixer
       brightnessctl
       blueman
+      btop
+
       apple-cursor
       libnotify
       playerctl
-      brave
-      opencode-desktop
-      font-awesome_6
-      font-awesome_7
+      fastfetch
+      grim
+      slurp
+      swappy
+      cava
 
+      proton-vpn
+      transmission_4-gtk
+      resources
+      geary
+      peazip
+      vlc
+      gparted
+      xhost
+      amberol
+      gpu-screen-recorder
+      clamav
+      clamtk
+
+      helium
+      firefox
+      opencode-desktop
       libreoffice-fresh
-      onlyoffice-desktopeditors
-      beekeeper-studio
     ];
 
     fonts.packages = with pkgs; [

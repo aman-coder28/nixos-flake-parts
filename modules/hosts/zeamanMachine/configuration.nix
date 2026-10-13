@@ -52,12 +52,6 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    nixpkgs.config.allowUnfreePredicate =
-      pkg:
-      builtins.elem (lib.getName pkg) [
-        "tableplus"
-      ];
-
     time.timeZone = "Africa/Nairobi";
     i18n.defaultLocale = "en_US.UTF-8";
 
@@ -78,10 +72,6 @@
     };
 
     programs.fish.enable = true;
-
-    sops.defaultSopsFile = "/home/zeaman/Code/projects/solid-tudos/.env.local";
-    sops.defaultSopsFormat = "env";
-    sops.age.keyFile = "/home/zeaman/.config/sops/age/keys.txt";
 
     users.users.zeaman = {
       isNormalUser = true;
