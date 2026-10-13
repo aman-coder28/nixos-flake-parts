@@ -39,8 +39,6 @@
       bat
       eza
       atuin
-      starship
-      zoxide
       nixd
       nil
       nixfmt
