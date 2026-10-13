@@ -1,19 +1,16 @@
 { self, ... }:
 {
-  flake.homeModules.zeamanHomeConfig = { ... }: {
-    home.username = "zeaman";
-    home.homeDirectory = "/home/zeaman";
-
-    imports = [
-      self.homeModules.ZedConfig
-    ];
-
-    programs.starship = {
-      enable = true;
-      enableFishIntegration = true;
+	flake.homeConfigurations = home-manager.lib.homeManagerConfiguration {
+      pkgs = import nixpkgs { system = "x86_64-linux"; };
+      modules = [
+       	{
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          extraSpecialArgs = { inherit inputs; };
+          backupFileExtension = "backup";
+          users.zeaman = self.homeModules.zeamanHomeConfig;
+        };
+      ];
     };
-
-    home.stateVersion = "26.11";
-    programs.home-manager.enable = true;
   };
 }

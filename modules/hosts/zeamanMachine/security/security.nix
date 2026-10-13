@@ -1,9 +1,5 @@
 { self, ... }: {
   flake.nixosModules.Security = { ... }: {
-    imports = [
-      self.nixosModules.AppArmor
-    ];
-
     networking.firewall = {
       enable = true;
       allowedTCPPorts = [

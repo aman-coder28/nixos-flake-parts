@@ -2,26 +2,26 @@
 
   flake.nixosModules.Services = { pkgs, ... }: {
     services.displayManager.gdm = {
-      enable = false;
+      enable = true;
     };
     services.desktopManager.gnome.enable = true;
 
-    programs.noctalia-greeter = {
-      enable = true;
-      package = inputs.noctalia-greeter.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    # programs.noctalia-greeter = {
+    #   enable = true;
+    #   package = inputs.noctalia-greeter.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
-      settings.cursor = {
-        theme = "macOS";
-        size = 24;
-        package = pkgs.apple-cursor;
-      };
-    };
+    #   settings.cursor = {
+    #     theme = "macOS";
+    #     size = 24;
+    #     package = pkgs.apple-cursor;
+    #   };
+    # };
 
     services.clamav = {
       daemon.enable = true;
       updater.enable = true;
       scanner.enable = true;
-      clamonacc.enable = true;
+      # clamonacc.enable = true;
     };
 
     services.pulseaudio.enable = false;
