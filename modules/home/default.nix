@@ -6,7 +6,6 @@
 
     imports = [
       self.homeModules.ZedConfig
-      self.homeModules.VSCodeConfig
     ];
 
     programs.starship = {

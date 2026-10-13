@@ -94,7 +94,6 @@
       clamtk
 
       helium
-      firefox
       opencode-desktop
       libreoffice-fresh
     ];

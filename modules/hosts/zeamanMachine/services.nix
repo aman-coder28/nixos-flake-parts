@@ -22,11 +22,6 @@
       updater.enable = true;
       scanner.enable = true;
       clamonacc.enable = true;
-
-      daemon.settings = {
-        OnAccessPrevention = true;
-        OnAccessIncludePath = "/home/beaman/Downloads";
-      };
     };
 
     services.pulseaudio.enable = false;

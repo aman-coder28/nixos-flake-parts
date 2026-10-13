@@ -49,7 +49,7 @@
       "net.ipv4.conf.all.accept_source_route" = 0;
 
       # App Armor
-      "apparmor" = 1;
+      # "apparmor" = 1;
 
       # Memory
       "kernel.kptr_restrict" = 2;
