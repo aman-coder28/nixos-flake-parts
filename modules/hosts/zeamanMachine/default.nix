@@ -1,8 +1,8 @@
 { self, inputs, ... }: {
-  flake.nixosConfigurations.zeamanMachine = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.zeamanuelMachine = inputs.nixpkgs.lib.nixosSystem {
     modules = [
-      self.nixosModules.zeamanMachineConfig
-      self.nixosModules.zeamanMachineHardware
+      self.nixosModules.zeamanuelMachineConfig
+      self.nixosModules.zeamanuelMachineHardware
       self.nixosModules.Settings
       self.nixosModules.Services
       self.nixosModules.SysPackages

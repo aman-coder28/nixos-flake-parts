@@ -5,6 +5,6 @@
 
     extraSpecialArgs = { inherit inputs; };
 
-    modules = [ self.homeModules.zeamanHomeConfig ];
+    modules = [ self.homeModules.zeamanuelHomeConfig ];
   };
 }

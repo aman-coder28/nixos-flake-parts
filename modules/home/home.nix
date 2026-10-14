@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  flake.homeModules.zeamanHomeConfig = { ... }: {
+  flake.homeModules.zeamanuelHomeConfig = { ... }: {
     home.username = "zeamanuel";
     home.homeDirectory = "/home/zeamanuel";
 

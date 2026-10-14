@@ -6,6 +6,12 @@
       enableFishIntegration = true;
       enableBashIntegration = true;
     };
+    programs.atuin = {
+      enable = true;
+      enableFishIntegration = true;
+      enableBashIntegration = true;
+    };
+
     programs.starship.enable = true;
     programs.nix-ld.enable = true;
     programs.kdeconnect.enable = true;
@@ -44,15 +50,12 @@
       nixfmt
       nixfmt-tree
 
-      hyprland
       hyprpicker
       hyprland-qt-support
-      xdg-desktop-portal-hyprland
       hyprland-qtutils
       hypridle
       noctalia
       noctalia-greeter
-      niri
 
       quickshell
       qt6.qtdeclarative
@@ -95,7 +98,7 @@
 
       helium
       opencode-desktop
-      libreoffice-fresh
+      libreoffice
     ];
 
     fonts.packages = with pkgs; [

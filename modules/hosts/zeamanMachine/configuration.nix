@@ -1,6 +1,6 @@
 { ... }: {
 
-  flake.nixosModules.zeamanMachineConfig = { pkgs, lib, ... }: {
+  flake.nixosModules.zeamanuelMachineConfig = { pkgs, lib, ... }: {
     boot.loader.systemd-boot.enable = true;
     boot.loader.timeout = 2;
     boot.loader.grub.theme = "${pkgs.kdePackages.breeze-grub}/grub/themes/breeze";

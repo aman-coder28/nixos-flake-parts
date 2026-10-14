@@ -1,17 +1,10 @@
 { ... }: {
 
-  flake.nixosModules.zeamanMachineHardware =
+  flake.nixosModules.zeamanuelMachineHardware =
     {
       modulesPath,
       lib,
       config,
-      ...
-    }:
-    {
-      config,
-      lib,
-      pkgs,
-      modulesPath,
       ...
     }:
 
