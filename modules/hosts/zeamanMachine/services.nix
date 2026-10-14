@@ -41,32 +41,5 @@
     };
     services.upower.enable = true;
     hardware.bluetooth.enable = true;
-
-    services.mysql = {
-      enable = true;
-      package = pkgs.mariadb;
-      ensureDatabases = [ "learning" ];
-    };
-
-    services.postgresql = {
-      enable = true;
-      ensureDatabases = [ "tudos" ];
-      enableTCPIP = true;
-      authentication = pkgs.lib.mkOverride 10 ''
-        local all      all     trust
-        host  all      all     127.0.0.1/32   trust
-        host  all      all     ::1/128        trust
-      '';
-      ensureUsers = [
-        {
-          name = "tudos";
-          ensureDBOwnership = true;
-          ensureClauses = {
-            login = true;
-            password = "password";
-          };
-        }
-      ];
-    };
   };
 }
