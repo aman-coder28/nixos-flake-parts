@@ -47,7 +47,7 @@
       memoryPercent = 50;
     };
 
-    networking.hostName = "zeamanMachine";
+    networking.hostName = "nixos";
     networking.networkmanager.enable = true;
 
     nixpkgs.config.allowUnfree = true;
@@ -73,9 +73,9 @@
 
     programs.fish.enable = true;
 
-    users.users.zeaman = {
+    users.users.zeamanuel = {
       isNormalUser = true;
-      description = "ZeAman";
+      description = "ZeAmanuel";
       extraGroups = [
         "networkmanager"
         "wheel"

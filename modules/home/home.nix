@@ -1,8 +1,8 @@
 { self, ... }:
 {
   flake.homeModules.zeamanHomeConfig = { ... }: {
-    home.username = "zeaman";
-    home.homeDirectory = "/home/zeaman";
+    home.username = "zeamanuel";
+    home.homeDirectory = "/home/zeamanuel";
 
     home.useGlobalPkgs = true;
     home.useUserPackages = true;

@@ -144,15 +144,15 @@
 
               options = {
                 nixos = {
-                  expr = "(builtins.getFlake (builtins.toString \"/etc/nixos\")).nixosConfigurations.zeaman.options";
+                  expr = "(builtins.getFlake (builtins.toString \"/home/zeamanuel/Code/config/nixos-flake-parts\")).nixosConfigurations.zeamanuel.options";
                 };
                 home-manager = {
-                  expr = "(builtins.getFlake (builtins.toString \"/etc/nixos\")).nixosConfigurations.zeaman.options.home-manager.users.type.getSubOptions []";
+                  expr = "(builtins.getFlake (builtins.toString \"/home/zeamanuel/Code/config/nixos-flake-parts\")).nixosConfigurations.zeamanuel.options.home-manager.users.type.getSubOptions []";
                 };
 
-                # flake-parts = {
-                #   expr = "(builtins.getFlake \"/etc/nixos\").debug.options";
-                # };
+                flake-parts = {
+                  expr = "(builtins.getFlake \"/home/zeamanuel/Code/config/nixos-flake-parts\").debug.options";
+                };
               };
 
               diagnostic = {
