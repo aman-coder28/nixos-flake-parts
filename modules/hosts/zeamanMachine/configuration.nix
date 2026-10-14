@@ -73,7 +73,7 @@
 
     programs.fish.enable = true;
 
-    users.users.zeamanuel = {
+    users.users."zeamanuel" = {
       isNormalUser = true;
       description = "ZeAmanuel";
       extraGroups = [
