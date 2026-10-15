@@ -1,179 +1,171 @@
 { ... }: {
-  flake.homeModules.ZedConfig = { pkgs, ... }: {
-    programs.zed-editor = {
-      enable = true;
+  flake.homeModules.ZedConfig =
+    { pkgs, config, ... }:
+    let
+      flakePath = "${config.home.homeDirectory}/Code/config/nixos-flake-parts";
+      getFlake = ''(builtins.getFlake "${flakePath}")'';
+    in
+    {
 
-      defaultEditor = true;
+      programs.zed-editor = {
+        enable = true;
 
-      extensions = [
-        "nix"
-        "oxc"
-        "tailwindcss"
-        "emmet"
-        "vue"
-        "vscode-icons"
-      ];
+        defaultEditor = true;
 
-      userSettings = {
-        diff_view_style = "split";
-        cli_default_open_behavior = "existing_window";
-        git_panel = {
-          dock = "left";
-        };
-        buffer_line_height = "comfortable";
-        project_panel = {
-          auto_fold_dirs = false;
-          hide_hidden = true;
-          dock = "left";
-          hide_gitignore = true;
-        };
-        edit_predictions = {
-          provider = "none";
-        };
-        show_edit_predictions = false;
-        disable_ai = true;
-        toolbar = {
-          quick_actions = false;
-          breadcrumbs = false;
-        };
-        show_wrap_guides = true;
-        autoscroll_on_clicks = true;
-        telemetry = {
-          metrics = false;
-        };
-        format_on_save = "on";
-        formatter = "language_server";
-        ui_font_size = 15.6;
-        ui_font_family = "Adwaita Sans";
-        ui_font_weight = 300;
-        buffer_font_size = 15.8;
-        buffer_font_family = "JetBrains Mono";
-        buffer_font_weight = 395;
-        tab_size = 2;
-        preferred_line_length = 110;
-        soft_wrap = "bounded";
-        icon_theme = "VSCode Icons for Zed (Dark)";
-        session = {
-          trust_all_worktrees = true;
-        };
-        theme = "One Dark";
-        terminal = {
-          dock = "bottom";
-          shell = {
-            program = "${pkgs.fish}/bin/fish";
+        extensions = [
+          "nix"
+          "oxc"
+          "tailwindcss"
+          "emmet"
+          "vue"
+          "vscode-icons"
+        ];
+
+        userSettings = {
+          diff_view_style = "split";
+          cli_default_open_behavior = "existing_window";
+          git_panel = {
+            dock = "left";
           };
-        };
-        file_types = {
-          "Git Config" = [
-            "conf"
-          ];
-        };
-
-        languages = {
-          Rust = {
-            hard_tabs = true;
-            tab_size = 2;
+          buffer_line_height = "comfortable";
+          project_panel = {
+            auto_fold_dirs = false;
+            hide_hidden = true;
+            dock = "left";
+            hide_gitignore = true;
           };
-          TypeScript = {
-            formatter = [
-              {
-                language_server = {
-                  name = "oxfmt";
-                };
-              }
+          edit_predictions = {
+            provider = "none";
+          };
+          show_edit_predictions = false;
+          disable_ai = true;
+          toolbar = {
+            quick_actions = false;
+            breadcrumbs = false;
+          };
+          show_wrap_guides = true;
+          autoscroll_on_clicks = true;
+          telemetry = {
+            metrics = false;
+          };
+          format_on_save = "on";
+          formatter = "language_server";
+          ui_font_size = 15.6;
+          ui_font_family = "Adwaita Sans";
+          ui_font_weight = 300;
+          buffer_font_size = 15.8;
+          buffer_font_family = "JetBrains Mono";
+          buffer_font_weight = 395;
+          tab_size = 2;
+          preferred_line_length = 110;
+          soft_wrap = "bounded";
+          icon_theme = "VSCode Icons for Zed (Dark)";
+          session = {
+            trust_all_worktrees = true;
+          };
+          theme = "One Dark";
+          terminal = {
+            dock = "bottom";
+            shell = {
+              program = "${pkgs.fish}/bin/fish";
+            };
+          };
+          file_types = {
+            "Git Config" = [
+              "conf"
             ];
           };
-          JavaScript = {
-            formatter = [
-              {
-                language_server = {
-                  name = "oxfmt";
-                };
-              }
-            ];
-          };
-          TSX = {
-            formatter = [
-              {
-                language_server = {
-                  name = "oxfmt";
-                };
-              }
-            ];
-          };
-          CSS = {
-            formatter = [
-              {
-                language_server = {
-                  name = "oxfmt";
-                };
-              }
-            ];
-          };
-        };
 
-        lsp = {
-          vtsls = {
-            enable_lsp_tasks = true;
+          languages = {
+            Rust = {
+              hard_tabs = true;
+              tab_size = 2;
+            };
+            TypeScript = {
+              formatter = [
+                {
+                  language_server = {
+                    name = "oxfmt";
+                  };
+                }
+              ];
+            };
+            JavaScript = {
+              formatter = [
+                {
+                  language_server = {
+                    name = "oxfmt";
+                  };
+                }
+              ];
+            };
+            TSX = {
+              formatter = [
+                {
+                  language_server = {
+                    name = "oxfmt";
+                  };
+                }
+              ];
+            };
+            CSS = {
+              formatter = [
+                {
+                  language_server = {
+                    name = "oxfmt";
+                  };
+                }
+              ];
+            };
           };
-          oxlint = {
-            initialization_options = {
+
+          lsp = {
+            vtsls = {
+              enable_lsp_tasks = true;
+            };
+            oxlint = {
+              initialization_options = {
+                settings = {
+                  configPath = null;
+                  disableNestedConfig = false;
+                  fixKind = "safe_fix";
+                  run = "onType";
+                  typeAware = true;
+                  unusedDisableDirectives = "deny";
+                };
+              };
+            };
+
+            nixd = {
+              binary.path = "${pkgs.nixd}/bin/nixd";
+
               settings = {
-                configPath = null;
-                disableNestedConfig = false;
-                fixKind = "safe_fix";
-                run = "onType";
-                typeAware = true;
-                unusedDisableDirectives = "deny";
+                nixpkgs.expr = "import ${getFlake}.inputs.nixpkgs { }";
+
+                formatting.command = [ "nixfmt" ];
+
+                options = {
+                  nixos.expr = "${getFlake}.nixosConfigurations.zeamanuelMachine.options";
+                  home-manager.expr = "${getFlake}.homeConfigurations.zeamanuel.options";
+                  flake-parts.expr = "${getFlake}.debug.options";
+                };
+
+                diagnostic.suppress = [ "sema-extra-with" ];
               };
             };
-          };
-          nixd = {
-            binary.path = "${pkgs.nixd}/bin/nixd";
 
-            settings = {
-              nixpkgs = {
-                expr = "import <nixpkgs> { }";
+            nix = {
+              binary = {
+                path_lookup = true;
               };
-
-              formatting = {
-                command = [
-                  "nixfmt"
-                ];
-              };
-
-              options = {
-                nixos = {
-                  expr = "(builtins.getFlake (builtins.toString \"/home/zeamanuel/Code/config/nixos-flake-parts\")).nixosConfigurations.zeamanuel.options";
-                };
-                home-manager = {
-                  expr = "(builtins.getFlake (builtins.toString \"/home/zeamanuel/Code/config/nixos-flake-parts\")).nixosConfigurations.zeamanuel.options.home-manager.users.type.getSubOptions []";
-                };
-
-                flake-parts = {
-                  expr = "(builtins.getFlake \"/home/zeamanuel/Code/config/nixos-flake-parts\").debug.options";
-                };
-              };
-
-              diagnostic = {
-                suppress = [
-                  "sema-extra-with"
-                ];
-              };
-            };
-          };
-
-          nix = {
-            binary = {
-              path_lookup = true;
             };
           };
         };
-      };
 
-      mutableUserSettings = true;
-      mutableUserKeymaps = true;
-      mutableUserTasks = true;
+        mutableUserSettings = true;
+        mutableUserKeymaps = true;
+        mutableUserTasks = true;
+      };
     };
-  };
+
 }

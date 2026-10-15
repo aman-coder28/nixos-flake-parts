@@ -3,9 +3,6 @@
   flake.homeModules.zeamanuelHomeConfig = { ... }: {
     home.username = "zeamanuel";
     home.homeDirectory = "/home/zeamanuel";
-
-    home.useGlobalPkgs = true;
-    home.useUserPackages = true;
     home.backupFileExtension = "backup";
 
     imports = [

@@ -20,6 +20,13 @@
 
     services.keyd = {
       enable = true;
+      keyboards.default = {
+        ids = [ "*" ];
+        settings.main = {
+          leftalt = "rightcontrol";
+          # rightalt = "rightcontrol";
+        };
+      };
     };
 
     environment.etc."libinput/local-overrides.quirks".text = ''
