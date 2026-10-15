@@ -18,12 +18,25 @@
     };
     programs.niri.enable = true;
 
+    services.keyd = {
+      enable = true;
+    };
+
+    environment.etc."libinput/local-overrides.quirks".text = ''
+      [Serial Keyboards]
+      MatchUdevType=keyboard
+      MatchName=keyd virtual keyboard
+      AttrKeyboardIntegration=internal
+    '';
+
     services.clamav = {
       daemon.enable = true;
       updater.enable = true;
       scanner.enable = true;
       # clamonacc.enable = true;
     };
+
+    services.flatpak.enable = true;
 
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;

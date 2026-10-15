@@ -35,6 +35,7 @@
       nodejs_latest
       pnpm
       gcc
+      pkg-config
       cmake
       llvmPackages_23.clang
       llvmPackages_23.clang-tools
@@ -91,6 +92,19 @@
       vlc
       gparted
       xhost
+      emojify
+      gnome-mahjongg
+      localsend
+      opencode-desktop
+      opencode
+      refine
+      brave
+      bazaar
+      authenticator
+      discord
+      proton-vpn
+      proton-pass
+      resources
       amberol
       gpu-screen-recorder
       clamav
