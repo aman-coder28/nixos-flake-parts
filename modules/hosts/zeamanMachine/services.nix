@@ -29,12 +29,12 @@
       AttrKeyboardIntegration=internal
     '';
 
-    services.clamav = {
-      daemon.enable = true;
-      updater.enable = true;
-      scanner.enable = true;
-      # clamonacc.enable = true;
-    };
+    # services.clamav = {
+    #   daemon.enable = true;
+    #   updater.enable = true;
+    #   scanner.enable = true;
+    #   # clamonacc.enable = true;
+    # };
 
     services.flatpak.enable = true;
 

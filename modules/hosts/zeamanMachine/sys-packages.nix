@@ -35,6 +35,7 @@
       nodejs_latest
       pnpm
       gcc
+      jdk25
       pkg-config
       cmake
       llvmPackages_23.clang
@@ -74,6 +75,7 @@
       brightnessctl
       blueman
       btop
+      keyd
 
       apple-cursor
       libnotify
