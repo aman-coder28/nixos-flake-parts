@@ -24,7 +24,8 @@
         ids = [ "*" ];
         settings.main = {
           leftalt = "rightcontrol";
-          # rightalt = "rightcontrol";
+          leftcontrol = "rightcontrol";
+          leftshift = "rightshift";
         };
       };
     };

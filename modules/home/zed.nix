@@ -63,7 +63,7 @@
           session = {
             trust_all_worktrees = true;
           };
-          theme = "One Dark";
+          theme = "Rosé Pine";
           terminal = {
             dock = "bottom";
             shell = {
