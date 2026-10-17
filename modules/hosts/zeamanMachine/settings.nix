@@ -19,6 +19,7 @@
     environment.sessionVariables = {
       NIXOS_OZONE_WL = "1";
     };
+    environment.sessionVariables.PATH = [ "$HOME/.local/bin" ];
 
     system.stateVersion = "26.11";
   };

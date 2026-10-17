@@ -14,6 +14,20 @@
 
     programs.starship.enable = true;
     programs.nix-ld.enable = true;
+    programs.nix-ld.libraries = with pkgs; [
+      gtk4
+      gtksourceview5
+      poppler
+      glib
+      cairo
+      pango
+      gdk-pixbuf
+      fontconfig
+      graphene
+      harfbuzz
+      gst_all_1.gstreamer
+      gst_all_1.gst-plugins-base
+    ];
     programs.kdeconnect.enable = true;
 
     environment.shellAliases = {
@@ -49,6 +63,8 @@
       atuin
       nixd
       nil
+      fzf
+      ripgrep
       nixfmt
       nixfmt-tree
 
@@ -122,6 +138,8 @@
       fira-code
       fira-code-symbols
       inter
+      roboto
+      roboto-mono
     ];
   };
 }

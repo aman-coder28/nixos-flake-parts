@@ -25,7 +25,8 @@
         settings.main = {
           leftalt = "rightcontrol";
           leftcontrol = "rightcontrol";
-          leftshift = "rightshift";
+          leftshift = "shift";
+          capslock = "shift";
         };
       };
     };
