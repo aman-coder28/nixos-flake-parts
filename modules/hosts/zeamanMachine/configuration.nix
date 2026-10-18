@@ -1,6 +1,6 @@
 { ... }: {
 
-  flake.nixosModules.zeamanuelMachineConfig = { pkgs, lib, ... }: {
+  flake.nixosModules.zeamanuelMachineConfig = { pkgs, ... }: {
     boot.loader.systemd-boot.enable = true;
     boot.loader.timeout = 2;
     boot.loader.grub.theme = "${pkgs.kdePackages.breeze-grub}/grub/themes/breeze";
@@ -47,7 +47,7 @@
       memoryPercent = 50;
     };
 
-    networking.hostName = "nixos";
+    networking.hostName = "zeamanuelMachine";
     networking.networkmanager.enable = true;
     networking.firewall.trustedInterfaces = [ "virbr0" ];
 

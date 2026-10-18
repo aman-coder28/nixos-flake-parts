@@ -1,14 +1,16 @@
 { ... }: {
   flake.nixosModules.Services = { pkgs, ... }: {
     services.desktopManager.gnome.enable = true;
+
     services.displayManager.noctalia-greeter = {
       enable = true;
       settings = {
-        cursor = {
-          theme = "macOS";
-          size = 30;
-          path = pkgs.apple-cursor;
-        };
+        cursor.size = 30;
+        keyboard.layout = "us";
+      };
+      cursorTheme = {
+        package = pkgs.apple-cursor;
+        name = "macOS";
       };
     };
 
@@ -17,8 +19,13 @@
       xwayland.enable = true;
     };
     programs.niri.enable = true;
-    # programs.umbriel.enable = true;
     programs.mango.enable = true;
+
+    programs.nh = {
+      enable = true;
+
+      flake = "/home/zeamanuel/Code/config/nixos-flake-parts/";
+    };
 
     virtualisation.libvirtd.enable = true;
     programs.virt-manager.enable = true;
@@ -42,13 +49,6 @@
       MatchName=keyd virtual keyboard
       AttrKeyboardIntegration=internal
     '';
-
-    # services.clamav = {
-    #   daemon.enable = true;
-    #   updater.enable = true;
-    #   scanner.enable = true;
-    #   # clamonacc.enable = true;
-    # };
 
     services.flatpak.enable = true;
 

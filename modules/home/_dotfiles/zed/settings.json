@@ -25,8 +25,8 @@
     "dock": "left"
   },
   "project_panel": {
-    "hide_gitignore": false,
-    "hide_hidden": false,
+    "hide_gitignore": true,
+    "hide_hidden": true,
     "dock": "left",
     "auto_fold_dirs": false
   },
@@ -66,7 +66,7 @@
     },
     "nixd": {
       "binary": {
-        "path": "/nix/store/fp1zhwzw3hamxrzr9bgar6avk1my3qpc-nixd-2.9.3/bin/nixd"
+        "path": "/nix/store/va72pzxzj53807h9hqpyhwiv2a0l4a27-nixd-2.9.3/bin/nixd"
       },
       "settings": {
         "diagnostic": {
@@ -97,6 +97,13 @@
     },
     "vtsls": {
       "enable_lsp_tasks": true
+    },
+    "clangd": {
+      "binary": {
+        "arguments": [
+          "--experimental-modules-support"
+        ]
+      }
     }
   },
   "languages": {

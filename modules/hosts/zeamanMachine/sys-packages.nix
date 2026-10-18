@@ -17,6 +17,19 @@
       recommendedServices.enable = true;
     };
 
+    programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
+    programs.git = {
+      enable = true;
+      config = {
+        credential.helper = "manager";
+        credential.credentialStore = "cache";
+      };
+    };
+
     programs.starship.enable = true;
     programs.nix-ld.enable = true;
     programs.nix-ld.libraries = with pkgs; [
@@ -61,6 +74,7 @@
 
       git
       gh
+      git-credential-manager
       forgejo-cli
       nodejs_latest
       pnpm
@@ -79,6 +93,7 @@
       atuin
       nixd
       nil
+      devenv
       nixfmt-tree
       nix-search-tv
       nixfmt-rs
@@ -152,7 +167,7 @@
       emojify
 
       helium
-      librewolf
+      # librewolf
       opencode-desktop
       libreoffice
     ];

@@ -35,6 +35,13 @@
             || echo "warning: dotfile sync failed" >&2
         '';
 
+      programs.nh.enable = true;
+
+      home.sessionVariables = {
+        NH_OS_FLAKE = "/home/zeamanuel/Code/config/nixos-flake-parts#zeamanuelMachine";
+        NH_HOME_FLAKE = "/home/zeamanuel/Code/config/nixos-flake-parts#zeamanuel";
+      };
+
       home.stateVersion = "26.11";
       programs.home-manager.enable = true;
     };

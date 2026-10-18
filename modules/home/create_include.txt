@@ -7,6 +7,9 @@ hypr/
 noctalia/**
 noctalia/
 
+niri/**
+niri/
+
 kitty/**
 kitty/
 
