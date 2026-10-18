@@ -27,3 +27,6 @@ xdg-desktop-portal/
 
 environment.d/**
 environment.d/
+
+umbriel/**
+umbriel/

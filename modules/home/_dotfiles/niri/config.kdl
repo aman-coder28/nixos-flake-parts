@@ -13,6 +13,7 @@ input {
   trackpoint {
 
   }
+  focus-follows-mouse
 }
 /-output "eDP-1" {
 mode "1366x768@60.012"
@@ -20,6 +21,7 @@ scale 1
 transform "normal"
 }
 layout {
+	background-color "transparent"
   gaps 3
   center-focused-column "never"
   preset-column-widths {
@@ -482,5 +484,10 @@ binds {
 layer-rule {
   match namespace="^noctalia-backdrop"
   place-within-backdrop true
+}
+overview {
+  workspace-shadow {
+    off
+  }
 }
 include "noctalia.kdl"

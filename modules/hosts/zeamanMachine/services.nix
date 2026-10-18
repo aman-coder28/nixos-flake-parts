@@ -19,12 +19,12 @@
       xwayland.enable = true;
     };
     programs.niri.enable = true;
-    programs.mango.enable = true;
+    programs.umbriel.enable = true;
 
     programs.nh = {
       enable = true;
 
-      flake = "/home/zeamanuel/Code/config/nixos-flake-parts/";
+      flake = "/home/zeamanuel/Code/config/nixos-flake-parts#zeamanuelMachine";
     };
 
     virtualisation.libvirtd.enable = true;
