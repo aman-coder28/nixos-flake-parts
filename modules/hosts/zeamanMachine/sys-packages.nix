@@ -79,6 +79,7 @@
       nodejs_latest
       pnpm
       gcc
+      ccls
       jdk25
       pkg-config
       cmake
@@ -126,7 +127,6 @@
       cliphist
       pamixer
       brightnessctl
-      blueman
       btop
       keyd
 

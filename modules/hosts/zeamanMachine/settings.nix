@@ -21,6 +21,7 @@
     environment.sessionVariables = {
       NIXOS_OZONE_WL = "1";
       NH_OS_FLAKE = "/home/zeamanuel/Code/config/nixos-flake-parts/";
+      NH_HOME_FLAKE = "/home/zeamanuel/Code/config/nixos-flake-parts#zeamanuel";
     };
 
     environment.sessionVariables.PATH = [ "$HOME/.local/bin" ];

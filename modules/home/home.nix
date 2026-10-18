@@ -21,6 +21,11 @@
         enableFishIntegration = true;
       };
 
+      programs.fish = {
+        enable = true;
+        interactiveShellInit = "devenv hook fish | source";
+      };
+
       home.activation.syncDotfiles =
         let
           repo = "${config.home.homeDirectory}/Code/config/nixos-flake-parts";
