@@ -1,0 +1,19 @@
+[window]
+padding = { x = 12, y = 12 }
+decorations = "none"
+
+[font]
+normal = { family = "JetBrains Mono", style = "Light" }
+size = 12
+
+[cursor]
+  style = {
+    shape = "Beam",  # Options: Block, Underline, Beam
+    blinking = "Always"
+  }
+  thickness = 0.15
+
+[general]
+import = [
+  "~/.config/alacritty/themes/noctalia.toml"
+]

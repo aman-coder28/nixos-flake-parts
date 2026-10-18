@@ -1,0 +1,334 @@
+[backdrop]
+blur_intensity = 0.0
+tint_intensity = 0.99999997764825821
+
+[bar.default]
+border = "surface_variant"
+border_width = 0.5
+capsule = true
+capsule_radius = 6
+center = ["workspaces", "media", "notifications"]
+contact_shadow = true
+end = [
+  "tray",
+  "bar",
+  "widget",
+  "power_profile",
+  "network",
+  "volume",
+  "brightness",
+  "battery",
+  "clock",
+  "control-center",
+]
+font_family = "Adwaita Sans"
+margin_ends = 0
+padding = 8
+panel_overlap = 0
+radius = 0
+shadow = false
+start = ["launcher", "active_window"]
+thickness = 33
+
+[battery]
+warning_threshold = 40
+
+[control_center.calendar]
+show_events_card = false
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "dark_mode"
+
+[[control_center.shortcuts]]
+type = "clipboard"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = ["desktop-widget-0000000000000001"]
+
+[desktop_widgets.grid]
+cell_size = 8
+major_interval = 4
+visible = true
+
+[desktop_widgets.widget.desktop-widget-0000000000000001]
+box_height = 168.0
+box_width = 200.0
+cx = 1259.0
+cy = 124.0
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.0
+type = "weather"
+
+[desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+background_padding = 20
+show_forecast = true
+
+[dock]
+auto_hide = true
+reserve_space = false
+
+[idle]
+behavior_order = ["lock", "screen-off", "lock-and-suspend"]
+pre_action_fade_seconds = 10
+
+[idle.behavior.lock]
+action = "lock"
+enabled = true
+timeout = 300.0
+
+[idle.behavior.lock-and-suspend]
+action = "lock_and_suspend"
+enabled = true
+timeout = 350.0
+
+[idle.behavior.screen-off]
+action = "screen_off"
+enabled = true
+timeout = 300.0
+
+[location]
+auto_locate = true
+
+[lockscreen]
+blurred_desktop = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+  "lockscreen-login-box@WL-1",
+  "lockscreen-login-box@winit",
+  "lockscreen-login-box@eDP-1",
+  "lockscreen-widget-0000000000000001",
+]
+
+[lockscreen_widgets.grid]
+cell_size = 16
+major_interval = 4
+visible = true
+
+[lockscreen_widgets.widget."lockscreen-login-box@WL-1"]
+box_height = 196.0
+box_width = 635.0
+cx = 333.5
+cy = 533.0
+output = "WL-1"
+placement_height = 715.0
+placement_width = 667.0
+rotation = 0.0
+type = "login_box"
+
+[lockscreen_widgets.widget."lockscreen-login-box@WL-1".settings]
+background_color = "surface_variant"
+background_opacity = 0.88
+background_radius = 12.0
+center_password_text = false
+input_opacity = 1.0
+input_radius = 6.0
+layout = "regular"
+show_caps_lock = true
+show_keyboard_layout = true
+show_login_button = true
+show_media = true
+show_session_buttons = true
+show_unlock_hint = true
+show_weather = true
+
+[lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+box_height = 196.0
+box_width = 810.0
+cx = 683.0
+cy = 586.0
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.0
+type = "login_box"
+
+[lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+background_color = "surface_variant"
+background_opacity = 0.88
+background_radius = 12.0
+center_password_text = false
+input_opacity = 1.0
+input_radius = 6.0
+layout = "regular"
+show_caps_lock = true
+show_keyboard_layout = true
+show_login_button = true
+show_media = true
+show_session_buttons = true
+show_unlock_hint = true
+show_weather = true
+
+[lockscreen_widgets.widget."lockscreen-login-box@winit"]
+box_height = 196.0
+box_width = 810.0
+cx = 679.0
+cy = 522.0
+output = "winit"
+placement_height = 704.0
+placement_width = 1358.0
+rotation = 0.0
+type = "login_box"
+
+[lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
+background_color = "surface_variant"
+background_opacity = 0.88
+background_radius = 12.0
+center_password_text = false
+input_opacity = 1.0
+input_radius = 6.0
+layout = "regular"
+show_caps_lock = true
+show_keyboard_layout = true
+show_login_button = true
+show_media = true
+show_session_buttons = true
+show_unlock_hint = true
+show_weather = true
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+box_height = 128.0
+box_width = 320.0
+cx = 699.0
+cy = 192.0
+output = "eDP-1"
+placement_height = 768.0
+placement_width = 1366.0
+rotation = 0.0
+type = "clock"
+
+[lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+clock_style = "digital"
+format = "{:%I:%M %p}"
+timezone = "Africa/Addis_Ababa"
+
+[nightlight]
+enabled = false
+
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "/home/zeaman/Videos"
+
+[plugin_settings."noctalia/screen_recorder"]
+copy_to_clipboard = true
+
+[plugin_settings."noctalia/umbriel-companion"]
+panel_open_near_click = false
+
+[plugins]
+enabled = [
+  "oldirtty/color_picker",
+  "cleboost/zed-provider",
+  "yocraft/web-launcher",
+  "noctalia/umbriel-companion",
+]
+
+[shell]
+avatar_path = "/home/zeaman/Pictures/favicon.jpg"
+font_family = "Adwaita Sans"
+niri_overview_type_to_launch_enabled = true
+password_style = "random"
+polkit_agent = true
+screen_time_enabled = true
+
+[shell.panel]
+clipboard_placement = "attached"
+launcher_placement = "attached"
+
+[theme]
+builtin = "Noctalia"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-rainbow"
+
+[theme.templates]
+builtin_ids = [
+  "alacritty",
+  "btop",
+  "gtk3",
+  "gtk4",
+  "ghostty",
+  "hyprland",
+  "kcolorscheme",
+  "kitty",
+  "niri",
+  "qt",
+  "starship",
+  "umbriel",
+]
+community_ids = ["libreoffice", "fastfetch", "hyprtoolkit"]
+
+[wallpaper]
+directory = "/home/zeaman/Pictures/Wallpapers"
+
+[wallpaper.default]
+path = "/home/zeaman/Pictures/Wallpapers/fairy-tale-dark.webp"
+
+[wallpaper.last]
+path = "/home/zeaman/Pictures/Wallpapers/fairy-tale-dark.webp"
+
+[wallpaper.monitors.eDP-1]
+path = "/home/zeaman/Pictures/Wallpapers/fairy-tale-dark.webp"
+
+[widget.active_window]
+anchor = true
+
+[widget.bar]
+type = "noctalia/umbriel-companion:bar"
+
+[widget.battery]
+display_mode = "graphic"
+show_label = false
+
+[widget.brightness]
+scale = 1.1500000000000001
+show_label = false
+
+[widget.clock]
+format = "{:%I:%M %p}"
+timezone = "Africa/Addis_Ababa"
+
+[widget.launcher]
+anchor = true
+capsule = true
+capsule_padding = 4
+capsule_radius = 5
+custom_image = "/home/zeaman/Pictures/Fedora.svg"
+glyph = ""
+scale = 1.2
+
+[widget.media]
+album_art_only = true
+hide_when_no_media = true
+max_length = 170
+title_scroll = "on_hover"
+
+[widget.network]
+scale = 1.25
+show_label = false
+
+[widget.tray]
+hide_passive = false
+
+[widget.volume]
+scale = 1.05
+show_label = false
+
+[widget.widget]
+type = "oldirtty/color_picker:widget"

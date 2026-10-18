@@ -12,6 +12,11 @@
       enableBashIntegration = true;
     };
 
+    programs.noctalia = {
+      enable = true;
+      recommendedServices.enable = true;
+    };
+
     programs.starship.enable = true;
     programs.nix-ld.enable = true;
     programs.nix-ld.libraries = with pkgs; [
@@ -27,6 +32,17 @@
       harfbuzz
       gst_all_1.gstreamer
       gst_all_1.gst-plugins-base
+      libadwaita
+      libxcb
+
+      wayland
+      libxkbcommon
+      vulkan-loader
+      libGL
+      fontconfig
+      freetype
+      openssl
+      zlib
     ];
     programs.kdeconnect.enable = true;
 
@@ -63,16 +79,21 @@
       atuin
       nixd
       nil
+      nixfmt-tree
+      nix-search-tv
+      nixfmt-rs
       fzf
       ripgrep
       nixfmt
       nixfmt-tree
+      dnsmasq
+      qemu
 
       hyprpicker
       hyprland-qt-support
       hyprland-qtutils
       hypridle
-      noctalia
+      # noctalia
       noctalia-greeter
 
       quickshell
@@ -80,6 +101,7 @@
       qt6.qtmultimedia
       qt5.qtgraphicaleffects
       qt6.qtsvg
+      qt6.qt5compat
 
       xwayland-satellite
       mate-polkit
@@ -127,8 +149,10 @@
       gpu-screen-recorder
       clamav
       clamtk
+      emojify
 
       helium
+      librewolf
       opencode-desktop
       libreoffice
     ];

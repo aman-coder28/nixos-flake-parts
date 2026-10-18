@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ ... }: {
   flake.nixosModules.Services = { pkgs, ... }: {
     services.desktopManager.gnome.enable = true;
     services.displayManager.noctalia-greeter = {
@@ -6,7 +6,7 @@
       settings = {
         cursor = {
           theme = "macOS";
-          size = 28;
+          size = 30;
           path = pkgs.apple-cursor;
         };
       };
@@ -17,6 +17,11 @@
       xwayland.enable = true;
     };
     programs.niri.enable = true;
+    # programs.umbriel.enable = true;
+    programs.mango.enable = true;
+
+    virtualisation.libvirtd.enable = true;
+    programs.virt-manager.enable = true;
 
     services.keyd = {
       enable = true;
@@ -26,7 +31,7 @@
           leftalt = "rightcontrol";
           leftcontrol = "rightcontrol";
           leftshift = "shift";
-          capslock = "shift";
+          capslock = "overload(shift)";
         };
       };
     };

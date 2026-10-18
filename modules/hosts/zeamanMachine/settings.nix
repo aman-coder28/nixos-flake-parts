@@ -16,9 +16,12 @@
       dates = "03:45";
     };
 
+    systemd.services.NetworkManager-wait-online.enable = false;
+
     environment.sessionVariables = {
       NIXOS_OZONE_WL = "1";
     };
+
     environment.sessionVariables.PATH = [ "$HOME/.local/bin" ];
 
     system.stateVersion = "26.11";

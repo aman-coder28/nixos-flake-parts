@@ -7,6 +7,8 @@
       self.nixosModules.Services
       self.nixosModules.SysPackages
       self.nixosModules.Security
+      # inputs.umbriel.nixosModules.default
+      inputs.noctalia.nixosModules.default
       {
         nixpkgs.overlays = [
           inputs.helium-flake.overlays.default

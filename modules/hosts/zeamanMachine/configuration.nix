@@ -49,6 +49,9 @@
 
     networking.hostName = "nixos";
     networking.networkmanager.enable = true;
+    networking.firewall.trustedInterfaces = [ "virbr0" ];
+
+    hardware.graphics.enable = true;
 
     nixpkgs.config.allowUnfree = true;
 
@@ -79,6 +82,7 @@
       extraGroups = [
         "networkmanager"
         "wheel"
+        "libvirtd"
       ];
       shell = pkgs.fish;
     };

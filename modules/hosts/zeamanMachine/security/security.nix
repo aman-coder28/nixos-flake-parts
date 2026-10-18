@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ ... }: {
   flake.nixosModules.Security = { ... }: {
     networking.firewall = {
       enable = true;
